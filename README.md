@@ -69,17 +69,17 @@ Both the meshes and urdf/fish.urdf are contained within the fish_hpurv package.
 Taking the fish.urdf model now we  include three extra sensors and save it as fish_hpurv_macro.urdf under the ~/uav/src/fish_hpurv/urdf:
 
 
-- **Laser range‑finder**  
+- Laser range‑finder  
   - Link : `link_base`  
   - Plugin : `gazebo_ros_laser`  
   - Topic : `/scan`
 
-- **IMU**  
+- IMU  
   - Link : `link_base`  
   - Plugin : `gazebo_ros_imu`  
   - Topic : `/imu/data` (50 Hz)
 
-- **DVL – Doppler Velocity Log**  
+- DVL – Doppler Velocity Log  
   - Link : `link_base`  
   - Plugin : `libfish_dvl_plugin.so` (custom)  
   - Output : bottom‑tracking velocity
