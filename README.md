@@ -35,3 +35,23 @@ Using the Onshape‑to‑URDF exporter with our config.json, we generated the UR
 All exported STL meshes are stored in meshes/.
 The resulting URDF is located at urdf/fish.urdf.
 Both the meshes and urdf/fish.urdf are contained within the fish_hpurv package.
+
+Taking the fish.urdf model now we  include three extra sensors and save it as fish_hpurv_macro.urdf under the ~/uav/src/fish_hpurv/urdf:
+
+
+- **Laser range‑finder**  
+  - Link : `link_base`  
+  - Plugin : `gazebo_ros_laser`  
+  - Topic : `/scan`
+
+- **IMU**  
+  - Link : `link_base`  
+  - Plugin : `gazebo_ros_imu`  
+  - Topic : `/imu/data` (50 Hz)
+
+- **DVL – Doppler Velocity Log**  
+  - Link : `link_base`  
+  - Plugin : `libfish_dvl_plugin.so` (custom)  
+  - Output : bottom‑tracking velocity
+
+_All sensors are declared inside their own `<gazebo>` blocks, so they are spawned automatically when the model loads in Gazebo._
