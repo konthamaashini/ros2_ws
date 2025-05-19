@@ -7,7 +7,7 @@ Follow these steps to create a clean workspace called **`uav`**, clone this pack
 ## 1 · Create the workspace skeleton
 ```bash
 # make new workspace in your home folder
-mkdir -p ~/uav/src
+mkdir -p ~/uav
 cd ~/uav
 
 # bootstrap build + install directories (empty first build)
@@ -15,7 +15,7 @@ colcon build
 ```
 ## 2 · Clone this package
 ```bash
-cd ~/uav/src
+cd ~/uav
 git clone https://github.com/konthamaashini/uav.git
 ```
 ## 3 · Build the workspace
