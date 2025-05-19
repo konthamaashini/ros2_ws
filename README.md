@@ -27,6 +27,33 @@ source ~/uav/install/setup.bash
 ```bash
 ros2 launch fish_hpurv display.launch.py
 ```
+
+
+## Gazebo Environment Setup
+The following code lines are included in the launch file (e.g., `display.launch.py`) to configure Gazebo's plugin and model paths and define file paths for the simulation:
+
+```python
+# Set GAZEBO_PLUGIN_PATH to include uuv_gazebo_plugins
+set_gazebo_plugin_path = SetEnvironmentVariable(
+    name='GAZEBO_PLUGIN_PATH',
+    value=os.path.join(get_package_share_directory('uuv_gazebo_plugins'), 'lib')
+)
+
+# Set GAZEBO_MODEL_PATH to include necessary model directories
+set_gazebo_model_path = SetEnvironmentVariable(
+    name='GAZEBO_MODEL_PATH',
+    value=os.path.join(get_package_share_directory('uuv_gazebo_worlds'), 'models')
+)
+
+# Define package and file paths
+package_name = 'fish_hpurv'
+xacro_file = 'urdf/fish_hpurv_macro.urdf.xacro'
+world_file = 'worlds/ocean_waves.world'
+
+# Build full paths
+model_file_path = os.path.join(get_package_share_directory(package_name), xacro_file)
+world_file_path = os.path.join(get_package_share_directory('uuv_gazebo_worlds'), world_file)
+
 The fish geometry was modeled in Onshape (https://cad.onshape.com/documents/aaca298587ed8e68033344ff/w/b1920aaef25add5d3ec70db8/e/f61702870397c57547016114?renderMode=0&uiState=682af8d07aab7f5080a9108d).
 ![image](https://github.com/user-attachments/assets/363d55a5-c043-4d59-a68d-9513f89ab172)
 
