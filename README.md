@@ -15,7 +15,6 @@ colcon build
 ```
 ## 2 · Clone this package
 ```bash
-cd ~/uav
 git clone https://github.com/konthamaashini/uav.git
 ```
 ## 3 · Build the workspace
