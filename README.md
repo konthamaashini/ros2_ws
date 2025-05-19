@@ -23,7 +23,7 @@ cd ~/uav
 colcon build --symlink-install
 source ~/uav/install/setup.bash
 ```
-# 4 · Run the display launch file
+## 4 · Run the display launch file
 ```bash
 cd ~/uav
 ros2 launch fish_hpurv display.launch.py
