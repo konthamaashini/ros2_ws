@@ -66,6 +66,7 @@ All exported STL meshes are stored in `meshes/`.
 The resulting URDF is located at `urdf/fish.urdf`.  
 Both the meshes and `urdf/fish.urdf` are contained within the `fish_hpurv` package.
 
+Taking the fish.urdf model now we include three extra sensors and save it as fish_hpurv_macro.urdf under the ~/uav/src/fish_hpurv/urdf:
 
 - Laser range‑finder  
   - Link : `link_base`  
