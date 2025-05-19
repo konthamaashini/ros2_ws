@@ -1,4 +1,4 @@
-# UAV ROS 2 Workspace – Quick Setup
+# UAV ROS 2 Workspace 
 
 Follow these steps to create a clean workspace called **`uav`**, clone this package, and build everything with **colcon**.
 
@@ -16,7 +16,7 @@ colcon build
 ## 2 · Clone this package
 ```bash
 cd ~/uav/src
-git clone https://github.com/<your‑org>/<your‑package>.git   # ← replace with real URL
+git clone https://github.com/<your‑org>/<your‑package>.git   
 ```
 ## 3 · Build the workspace
 ```bash
