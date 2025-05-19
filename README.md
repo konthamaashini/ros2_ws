@@ -25,7 +25,6 @@ source ~/uav/install/setup.bash
 ```
 ## 4 · Run the display launch file
 ```bash
-cd ~/uav
 ros2 launch fish_hpurv display.launch.py
 ```
 The fish geometry was modeled in Onshape (https://cad.onshape.com/documents/aaca298587ed8e68033344ff/w/b1920aaef25add5d3ec70db8/e/f61702870397c57547016114?renderMode=0&uiState=682af8d07aab7f5080a9108d).
