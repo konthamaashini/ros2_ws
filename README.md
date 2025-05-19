@@ -55,6 +55,8 @@ model_file_path = os.path.join(get_package_share_directory(package_name), xacro_
 world_file_path = os.path.join(get_package_share_directory('uuv_gazebo_worlds'), world_file)
 ```
 
+## Fish 3D Model and URDF Setup
+```bash
 The fish geometry was modeled in Onshape (https://cad.onshape.com/documents/aaca298587ed8e68033344ff/w/b1920aaef25add5d3ec70db8/e/f61702870397c57547016114?renderMode=0&uiState=682af8d07aab7f5080a9108d).
 ![image](https://github.com/user-attachments/assets/363d55a5-c043-4d59-a68d-9513f89ab172)
 
@@ -83,3 +85,4 @@ Taking the fish.urdf model now we  include three extra sensors and save it as fi
   - Output : bottom‑tracking velocity
 
 _All sensors are declared inside their own `<gazebo>` blocks, so they are spawned automatically when the model loads in Gazebo._
+```
