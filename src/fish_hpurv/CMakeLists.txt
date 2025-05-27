@@ -83,7 +83,21 @@ target_link_libraries(CaudalForcePlugin
 install(TARGETS CaudalForcePlugin
   LIBRARY DESTINATION lib/${PROJECT_NAME}
 )
+add_executable(buoyancy scripts/buoyancy.cpp)
 
+target_include_directories(buoyancy PUBLIC
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+ament_target_dependencies(buoyancy
+  rclcpp
+  geometry_msgs
+  std_msgs
+)
+
+install(TARGETS buoyancy
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 # Install directories
 install(DIRECTORY launch urdf config meshes worlds models
